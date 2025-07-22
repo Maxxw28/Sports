@@ -343,3 +343,99 @@ input:checked + .slider::before {
       margin-top: 30px;
       font-size: 2rem;
     }
+
+/* dog-api styles */
+.dog-api .container {
+	flex-direction: column;
+	align-items: stretch;
+	padding-top: 0.5rem;
+}
+
+.button-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 2px 0 10px;
+	position: relative;
+}
+
+#reload-btn {
+	padding: 10px 20px;
+	background-color: #005aa7;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+	order: 2;
+}
+
+#reload-btn:hover {
+	background-color: #00407a;
+}
+
+#loader {
+	order: 3;
+	width: 100%;
+	text-align: left;
+	font-size: 1rem;
+	color: #333;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	min-height: 1.5em;
+}
+
+#loader.visible {
+	opacity: 1;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.dog-card {
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+	padding: 15px;
+	transform: translateY(20px);
+	opacity: 0;
+	animation: fadeInUp 0.5s ease forwards;
+}
+
+.dog-card:nth-child(n) {
+	animation-delay: calc(var(--index) * 0.05s);
+}
+
+.dog-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.dog-card p {
+	font-size: 0.95rem;
+	color: #555;
+	margin: 0;
+	padding: 0 5px;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

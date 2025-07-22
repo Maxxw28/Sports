@@ -1,69 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dogs</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="welcome-header">
-    <div class="container-header">
-      <h1 class="title-main">Spot The Sport</h1>
-      <nav class="nav-main">
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="credits.html">Credits</a></li>
-          <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
-          <li class="nav-item"><a class="nav-link" href="dogs.html">DOG API</a></li>
-          <li class="nav-item"><a href="">Dark mode:</a></li>
-        <li class="nav-item"><label class="switch"><input type="checkbox" id="theme-toggle"><span class="slider"></span></label></li>
-          
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <h2>Random dog photo :3</h2>
-  <div id="dogResult">
-  </div>
-  <script>
-    function fetchDogImage() {
-      const resultDiv = document.getElementById('dogResult');
-      resultDiv.innerHTML = '';
-      
-      fetch('https://dog.ceo/api/breeds/image/random')
-        .then(response => {
-          if (!response.ok) throw new Error('Błąd: ' + response.statusText);
-          return response.json();
-        })
-        .then(data => {
-          const img = document.createElement('img');
-          img.id = 'dogImage';
-          img.src = data.message;
-          img.alt = 'Random photo of dogs';
-          resultDiv.appendChild(img);
-        })
-        .catch(error => {
-          const errorMsg = document.createElement('p');
-          errorMsg.id = 'errorMessage';
-          errorMsg.textContent = 'Error: ' + error.message;
-          resultDiv.appendChild(errorMsg);
-        });
-    }
-    window.addEventListener('load', fetchDogImage);
-
-    const toggle = document.getElementById('theme-toggle');
-
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-        toggle.checked = true;
-    }
-
-    toggle.addEventListener('change', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
-    });
-</script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dog gallery</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>🏟️ Spot The Sport</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Main</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="cedits.html">Credits</a></li>
+						<li><a href="locations.html">Location</a></li>
+						<li><a href="#">DOG API</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="dog-api">
+				<div class="container">
+					<h2>🐶 Random Dog Gallery</h2>
+					<div class="button-row">
+						<button id="reload-btn">🔁 Reload Dogs</button>
+						<div id="loader">Loading dogs...</div>
+					</div>
+					<div class="gallery" id="dog-gallery"></div>
+				</div>
+			</section>
+		</main>
+		<script src="dogs.js"></script>
+	</body>
 </html>
