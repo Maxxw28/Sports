@@ -222,10 +222,16 @@ nav a:hover {
 .credits-row {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 300px;
     flex-wrap: wrap;
 }
-
+.credits-row2 {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+    margin-top: -250px;
+}
 .credits-main {
     display: flex;
     flex-direction: column;
@@ -247,4 +253,9 @@ nav a:hover {
     padding: 5px;
     margin-top: 20px;
     text-align: center;
+    transition: 0.5s;
+}
+.credits-container:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
 }
