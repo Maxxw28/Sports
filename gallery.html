@@ -30,4 +30,17 @@
         <img src="images/6.jpg" alt="6">
     </section>
 </body>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+    });
+</script>
 </html>
