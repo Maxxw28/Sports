@@ -23,10 +23,12 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-body{
+
+body {
     margin: 0;
-    padding: 0  ;
+    padding: 0;
 }
+
 header {
     background: linear-gradient(to right, #031e33, #160155);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -35,9 +37,9 @@ header {
     z-index: 1000;
     padding: 0;
     margin: 0;
-  }
+}
 
-  .container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -45,52 +47,52 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
+}
 
-  h1 {
+h1 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
-  }
+}
 
-  nav ul {
+nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
     padding: 0;
     margin: 0;
-  }
+}
 
-  nav a {
+nav a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background 0.3s ease;
-  }
+}
 
-  nav a:hover {
+nav a:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul {
-      flex-direction: column;
-      width: 100%;
-      gap: 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
     }
 
     nav a {
-      display: block;
-      width: 100%;
+        display: block;
+        width: 100%;
     }
-  }
+}
 
   .body-main {
   margin: 0;
@@ -266,4 +268,45 @@ input:checked + .slider {
 
 input:checked + .slider::before {
     transform: translateX(26px);
+}
+
+.credits-row {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+}
+.credits-row2 {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+    margin-top: -250px;
+}
+.credits-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.credits-main img {
+    width: 15vw;
+    height: 35vh;
+    border-radius: 4px;
+}
+
+.credits-container {
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.credits-container:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
 }
