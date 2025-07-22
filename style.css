@@ -302,8 +302,6 @@ input:checked + .slider::before {
 
 .credits-container {
     gap: 10px;
-    background: linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, #00c3ff, #ffff1c) border-box;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     padding: 5px;
@@ -323,9 +321,6 @@ input:checked + .slider::before {
     height: 35vh;
     border-radius: 12px;
     border: 4px solid transparent;
-    background: linear-gradient(135deg, #00c3ff, #ffff1c);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
