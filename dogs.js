@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dogImages.forEach((url, index) => {
                 const card = document.createElement('div');
                 card.className = 'dog-card';
-                card.style.setProperty('--index', index); // used for staggered animation
+                card.style.setProperty('--index', index);
 
                 const img = document.createElement('img');
                 img.src = url;
@@ -67,9 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initial load
     loadDogs();
 
-    // Reload on button click
     reloadBtn.addEventListener('click', () => loadDogs());
 });
