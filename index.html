@@ -42,10 +42,21 @@
         Ready to start your adventure? Dive into the gallery, explore new places, and help us make Spot The Sport the best source of sports venue information for everyone!
       </p>
       <a class="cta-button" href="gallery.html">Browse Venues</a>
+      <button class="cta-button" onclick="colors()" id="button1" style="border: none; margin-left: 10px;">Random color (JS)</button>
     </section>
   </main>
   <footer class="footer-main">
     <p class="footer-text">© 2024 Spot The Sport • All rights reserved</p>
   </footer>
 </body>
+
+<script>
+
+  function colors(){
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    let button = document.getElementById("button1");
+    button.style.backgroundColor = randomColor;
+  }
+
+</script>
 </html>
