@@ -9,6 +9,7 @@
     justify-content: center;
     max-width: 1200px;
     margin-top: 20px;
+    margin-left: 10%;
 }
 
 .gallery img {
@@ -131,6 +132,102 @@ nav a:hover {
     gap: 25px;
 }
 
+/* dog-api styles */
+.dog-api .container {
+	flex-direction: column;
+	align-items: stretch;
+	padding-top: 0.5rem;
+}
+
+.button-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 2px 0 10px;
+	position: relative;
+}
+
+#reload-btn {
+	padding: 10px 20px;
+	background-color: #005aa7;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+	order: 2;
+}
+
+#reload-btn:hover {
+	background-color: #00407a;
+}
+
+#loader {
+	order: 3;
+	width: 100%;
+	text-align: left;
+	font-size: 1rem;
+	color: #333;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	min-height: 1.5em;
+}
+
+#loader.visible {
+	opacity: 1;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.dog-card {
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+	padding: 15px;
+	transform: translateY(20px);
+	opacity: 0;
+	animation: fadeInUp 0.5s ease forwards;
+}
+
+.dog-card:nth-child(n) {
+	animation-delay: calc(var(--index) * 0.05s);
+}
+
+.dog-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.dog-card p {
+	font-size: 0.95rem;
+	color: #555;
+	margin: 0;
+	padding: 0 5px;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .nav-link {
     text-decoration: none;
     color: #fff;
@@ -204,7 +301,6 @@ nav a:hover {
     color: #fff;
     margin-top: 50px;
     font-size: 1rem;
-    border-radius: 0 0 16px 16px;
 }
 
 .footer-text {
@@ -356,4 +452,73 @@ input:checked + .slider::before {
     border: 4px solid transparent;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.mainheaderlocations {
+  color: black;
+}
+
+.img-text {
+  display: flex;
+
+}
+
+.left {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  padding: 30px;
+}
+.text h3{
+  font-size: 30px;
+}
+
+.page-foto {
+  height: 50vh;
+  background-image: url('images/Planche.jpg');
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-foto::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.page-foto h1{
+  text-align: center;
+  z-index: 2;
+  font-size: 60px;
+}
+
+.img-full{
+  width: 100%;
+  height: 100vh;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
