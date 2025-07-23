@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Credits</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credits</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  	<header>
+	<body>
+		<header>
 			<div class="container">
 				<h1>🏟️ Spot The Sport</h1>
 				<nav>
 					<ul>
-						<li><a href="index.html">Main</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
 						<li><a href="credits.html">Credits</a></li>
 						<li><a href="locations.html">Location</a></li>
 						<li><a href="dogs.html">DOG API</a></li>
-                        <li class="nav-item"><a href="#">Dark mode:</a></li>
-                        <li class="nav-item"><label class="switch"><input type="checkbox" id="theme-toggle"><span class="slider"></span></label></li>
+						<li class="nav-item"><a href="#">Dark mode:</a></li>
+						<li class="nav-item">
+							<label class="switch"
+								><input type="checkbox" id="theme-toggle" /><span
+									class="slider"
+								></span
+							></label>
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-    <main class="credits-main">
-        <div class="credits-row">
-            <div class="credits-container">
-                <img src="images/Remek.jpg" alt="Remy">
-                <h3>Remek Szabłowski</h3>
-                <p>Amazing Personality</p>
-            </div>
-            <div class="credits-container">
-                <img src="images/Max.jpg" alt="Max">
-                <h3>Max Wyżykowski</h3>
-                <p>Best Rizz</p>
-            </div>
-            <div class="credits-container">
-                <img src="images/Alex.jpg" alt="Alex">
-                <h3>Alex Łysakowski</h3>
-                <p>Just Cool Guy</p>
-            </div>
-        </div>
-        <div class="credits-row2">
-            <div class="credits-container">
-                <img src="images/Oli.png" alt="Oliver">
-                <h3>Oliver Kołacki</h3>
-                <p>Awesome Person</p>
-            </div>
-            <div class="credits-container">
-                <img src="images/Ostry.jpg" alt="Sharpee">
-                <h3>Mateusz Ostrowski</h3>
-                <p>The Best One</p>
-            </div>
-        </div>
-    </main>
-    <footer class="footer-main">
-        <p class="footer-text">© 2024 Spot The Sport • All rights reserved</p>
-    </footer>
-</body>
-<script>
-    const toggle = document.getElementById('theme-toggle');
+		<main class="credits-main">
+			<div class="credits-row">
+				<div class="credits-container">
+					<img src="images/Remek.jpg" alt="Remy" />
+					<h3>Remek Szabłowski</h3>
+					<p>Amazing Personality</p>
+				</div>
+				<div class="credits-container">
+					<img src="images/Max.jpg" alt="Max" />
+					<h3>Max Wyżykowski</h3>
+					<p>Best Rizz</p>
+				</div>
+				<div class="credits-container">
+					<img src="images/Alex.jpg" alt="Alex" />
+					<h3>Alex Łysakowski</h3>
+					<p>Just Cool Guy</p>
+				</div>
+			</div>
+			<div class="credits-row2">
+				<div class="credits-container">
+					<img src="images/Oli.png" alt="Oliver" />
+					<h3>Oliver Kołacki</h3>
+					<p>Awesome Person</p>
+				</div>
+				<div class="credits-container">
+					<img src="images/Ostry.jpg" alt="Sharpee" />
+					<h3>Mateusz Ostrowski</h3>
+					<p>The Best One</p>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-main">
+			<p class="footer-text">© 2024 Spot The Sport • All rights reserved</p>
+		</footer>
+	</body>
+	<script>
+		const toggle = document.getElementById('theme-toggle');
 
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-        toggle.checked = true;
-    }
+		if (localStorage.getItem('dark-mode') === 'true') {
+			document.body.classList.add('dark-mode');
+			toggle.checked = true;
+		}
 
-    toggle.addEventListener('change', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
-    });
-</script>
-
+		toggle.addEventListener('change', () => {
+			document.body.classList.toggle('dark-mode');
+			localStorage.setItem(
+				'dark-mode',
+				document.body.classList.contains('dark-mode')
+			);
+		});
+	</script>
 </html>
